@@ -193,7 +193,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         onTap: () {
                           //TODO Create transition to page 1
                           print('trans');
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => FirstPage(place: 'Kuta Beach', img: 'lib/images/img_2.png')));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => FirstPage(
+                                  place: 'Kuta Beach',
+                                  img: 'lib/images/img_2.png')));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -218,7 +221,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: const EdgeInsets.all(16.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Align(
                                     child: Container(
@@ -250,52 +254,117 @@ class _MyHomePageState extends State<MyHomePage> {
                                         SizedBox(
                                           height: 5,
                                         ),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.location_on_outlined,
-                                              color: Colors.white,
-                                            ),
-                                            Text(
-                                              'Bali, Indonesia',
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Row(
-                                          children: [
-                                            RatingBar(
-                                              ratingWidget: RatingWidget(
-                                                full: Icon(
-                                                  Icons.star,
-                                                  size: 1,
-                                                  color: Colors.yellow,
-                                                ),
-                                                half: Icon(
-                                                  Icons.star_half,
-                                                  color: Colors.yellow,
-                                                ),
-                                                empty: Icon(
-                                                  Icons.star,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                              onRatingUpdate: (rating) {},
-                                              initialRating: 4,
-                                              itemSize: 20,
-                                            ),
-                                            Text(
-                                              '  4.2',
-                                              style:
-                                                  TextStyle(color: Colors.white),
-                                            ),
-                                          ],
-                                        )
+                                        (size.width > 500)
+                                            ? Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Icon(
+                                                        Icons
+                                                            .location_on_outlined,
+                                                        color: Colors.white,
+                                                      ),
+                                                      Text(
+                                                        'Bali, Indonesia',
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                      SizedBox(width: 10,),
+                                                      RatingBar(
+                                                        ratingWidget:
+                                                        RatingWidget(
+                                                          full: Icon(
+                                                            Icons.star,
+                                                            size: 1,
+                                                            color:
+                                                            Colors.yellow,
+                                                          ),
+                                                          half: Icon(
+                                                            Icons.star_half,
+                                                            color:
+                                                            Colors.yellow,
+                                                          ),
+                                                          empty: Icon(
+                                                            Icons.star,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                        onRatingUpdate:
+                                                            (rating) {},
+                                                        initialRating: 4,
+                                                        itemSize: 20,
+                                                      ),
+                                                      Text(
+                                                        '  4.2',
+                                                        style: TextStyle(
+                                                            color:
+                                                            Colors.white),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              )
+                                            : Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Icon(
+                                                        Icons
+                                                            .location_on_outlined,
+                                                        color: Colors.white,
+                                                      ),
+                                                      Text(
+                                                        'Bali, Indonesia',
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      RatingBar(
+                                                        ratingWidget:
+                                                            RatingWidget(
+                                                          full: Icon(
+                                                            Icons.star,
+                                                            size: 1,
+                                                            color:
+                                                                Colors.yellow,
+                                                          ),
+                                                          half: Icon(
+                                                            Icons.star_half,
+                                                            color:
+                                                                Colors.yellow,
+                                                          ),
+                                                          empty: Icon(
+                                                            Icons.star,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                        onRatingUpdate:
+                                                            (rating) {},
+                                                        initialRating: 4,
+                                                        itemSize: 20,
+                                                      ),
+                                                      Text(
+                                                        '  4.2',
+                                                        style: TextStyle(
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              )
                                       ],
                                     ),
                                   )
@@ -309,10 +378,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 20,
                       ),
                       InkWell(
-                        onTap: (){
-                          //TODO Transition to page 2
+                        onTap: () {
                           print('page 2');
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => FirstPage(place: 'Baga Beach', img: 'lib/images/img_3.png')));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => FirstPage(
+                                  place: 'Baga Beach',
+                                  img: 'lib/images/img_3.png')));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -337,7 +408,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: const EdgeInsets.all(16.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Align(
                                     child: Container(
@@ -369,52 +441,107 @@ class _MyHomePageState extends State<MyHomePage> {
                                         SizedBox(
                                           height: 5,
                                         ),
-                                        Row(
+                                        (size.width > 500) ? Row(
                                           children: [
-                                            Icon(
-                                              Icons.location_on_outlined,
-                                              color: Colors.white,
-                                            ),
-                                            Text(
-                                              'Goa, India',
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Row(
-                                          children: [
-                                            RatingBar(
-                                              ratingWidget: RatingWidget(
-                                                full: Icon(
-                                                  Icons.star,
-                                                  size: 1,
-                                                  color: Colors.yellow,
-                                                ),
-                                                half: Icon(
-                                                  Icons.star_half,
-                                                  color: Colors.yellow,
-                                                ),
-                                                empty: Icon(
-                                                  Icons.star,
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.location_on_outlined,
                                                   color: Colors.white,
                                                 ),
-                                              ),
-                                              onRatingUpdate: (rating) {},
-                                              initialRating: 4,
-                                              itemSize: 20,
+                                                Text(
+                                                  'Goa, India',
+                                                  style: TextStyle(
+                                                      fontWeight: FontWeight.w600,
+                                                      color: Colors.white),
+                                                ),
+                                              ],
                                             ),
-                                            Text(
-                                              '  4.8',
-                                              style:
-                                                  TextStyle(color: Colors.white),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Row(
+                                              children: [
+                                                RatingBar(
+                                                  ratingWidget: RatingWidget(
+                                                    full: Icon(
+                                                      Icons.star,
+                                                      size: 1,
+                                                      color: Colors.yellow,
+                                                    ),
+                                                    half: Icon(
+                                                      Icons.star_half,
+                                                      color: Colors.yellow,
+                                                    ),
+                                                    empty: Icon(
+                                                      Icons.star,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  onRatingUpdate: (rating) {},
+                                                  initialRating: 4,
+                                                  itemSize: 20,
+                                                ),
+                                                Text(
+                                                  '  4.8',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ],
                                             ),
                                           ],
-                                        )
+                                        ): Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.location_on_outlined,
+                                                  color: Colors.white,
+                                                ),
+                                                Text(
+                                                  'Goa, India',
+                                                  style: TextStyle(
+                                                      fontWeight: FontWeight.w600,
+                                                      color: Colors.white),
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 5,
+                                            ),
+                                            Row(
+                                              children: [
+                                                RatingBar(
+                                                  ratingWidget: RatingWidget(
+                                                    full: Icon(
+                                                      Icons.star,
+                                                      size: 1,
+                                                      color: Colors.yellow,
+                                                    ),
+                                                    half: Icon(
+                                                      Icons.star_half,
+                                                      color: Colors.yellow,
+                                                    ),
+                                                    empty: Icon(
+                                                      Icons.star,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  onRatingUpdate: (rating) {},
+                                                  initialRating: 4,
+                                                  itemSize: 20,
+                                                ),
+                                                Text(
+                                                  '  4.8',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+
+
                                       ],
                                     ),
                                   )
@@ -458,163 +585,194 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(image: AssetImage('lib/images/img_4.png'),fit: BoxFit.cover,),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          height: 120,
-                          width: 90,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
                           children: [
-                            Text(
-                              'Kuta Resort',
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 20),
+                            Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('lib/images/img_4.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              height: 120,
+                              width: 90,
                             ),
-                            SizedBox(height: 8,),
-                            Text(
-                              "₹20,000",
-                              style: TextStyle(fontSize: 20),
+                            SizedBox(
+                              width: 10,
                             ),
-                            SizedBox(height: 8,),
-                            Row(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                RatingBar(
-                                  ratingWidget: RatingWidget(
-                                    full: Icon(
-                                      Icons.star,
-                                      size: 1,
-                                      color: Colors.yellow,
-                                    ),
-                                    half: Icon(
-                                      Icons.star_half,
-                                      color: Colors.yellow,
-                                    ),
-                                    empty: Icon(
-                                      Icons.star,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                  initialRating: 4,
-                                  itemSize: 20,
+                                Text(
+                                  'Kuta Resort',
+                                  style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 20),
                                 ),
                                 SizedBox(
-                                  width: 10,
+                                  height: 8,
                                 ),
                                 Text(
-                                  '4.8',
-                                  style: TextStyle(fontSize: 16),
+                                  "₹20,000",
+                                  style: TextStyle(fontSize: 20),
                                 ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Row(
+                                  children: [
+                                    RatingBar(
+                                      ratingWidget: RatingWidget(
+                                        full: Icon(
+                                          Icons.star,
+                                          size: 1,
+                                          color: Colors.yellow,
+                                        ),
+                                        half: Icon(
+                                          Icons.star_half,
+                                          color: Colors.yellow,
+                                        ),
+                                        empty: Icon(
+                                          Icons.star,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      onRatingUpdate: (rating) {},
+                                      initialRating: 4,
+                                      itemSize: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      '4.8',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  'A resort is a place used for \nvacation, relaxation or as',
+                                  style: TextStyle(color: Colors.grey),
+                                )
                               ],
                             ),
-                            SizedBox(height: 8,),
-                            Text(
-                              'A resort is a place used for \nvacation, relaxation or as ...',
-                              style: TextStyle(color: Colors.grey),
-                            )
                           ],
                         ),
-                        Align(alignment: Alignment.topRight,child: IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.heart)))
-
-
+                        Align(
+                            alignment: Alignment.topRight,
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(CupertinoIcons.heart)))
                       ],
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(19.0),
+                    padding: EdgeInsets.all(size.width / 35),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            image: DecorationImage(image: AssetImage('lib/images/img_3.png'),fit: BoxFit.cover,),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          height: 120,
-                          width: 90,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
                           children: [
-                            Text(
-                              'Baga Beach Resort',
-                              style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 20),
+                            Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('lib/images/img_3.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              height: 120,
+                              width: 90,
                             ),
-                            SizedBox(height: 8,),
-                            Text(
-                              "₹15,000",
-                              style: TextStyle(fontSize: 20),
+                            SizedBox(
+                              width: 10,
                             ),
-                            SizedBox(height: 8,),
-                            Row(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                RatingBar(
-                                  ratingWidget: RatingWidget(
-                                    full: Icon(
-                                      Icons.star,
-                                      size: 1,
-                                      color: Colors.yellow,
-                                    ),
-                                    half: Icon(
-                                      Icons.star_half,
-                                      color: Colors.yellow,
-                                    ),
-                                    empty: Icon(
-                                      Icons.star,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                  initialRating: 4,
-                                  itemSize: 20,
+                                Text(
+                                  'Baga Beach Resort',
+                                  style: TextStyle(
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 20),
                                 ),
                                 SizedBox(
-                                  width: 10,
+                                  height: 8,
                                 ),
                                 Text(
-                                  '4.8',
-                                  style: TextStyle(fontSize: 16),
+                                  "₹15,000",
+                                  style: TextStyle(fontSize: 20),
                                 ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Row(
+                                  children: [
+                                    RatingBar(
+                                      ratingWidget: RatingWidget(
+                                        full: Icon(
+                                          Icons.star,
+                                          size: 1,
+                                          color: Colors.yellow,
+                                        ),
+                                        half: Icon(
+                                          Icons.star_half,
+                                          color: Colors.yellow,
+                                        ),
+                                        empty: Icon(
+                                          Icons.star,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      onRatingUpdate: (rating) {},
+                                      initialRating: 4,
+                                      itemSize: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      '4.8',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  'A resort is a place used for \nvacation, relaxation or as ...',
+                                  style: TextStyle(color: Colors.grey),
+                                )
                               ],
                             ),
-                            SizedBox(height: 8,),
-                            Text(
-                              'A resort is a place used for \nvacation, relaxation or as ...',
-                              style: TextStyle(color: Colors.grey),
-                            )
                           ],
                         ),
-                        Align(alignment: Alignment.topRight,child: IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.heart)))
-
-
+                        Align(
+                            alignment: Alignment.topRight,
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(CupertinoIcons.heart)))
                       ],
                     ),
                   ),
                 ),
-
               ],
             ),
           ),
